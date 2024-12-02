@@ -40,7 +40,6 @@ header {
     padding: 10px 20px;
 }
 
-
 nav {
     position: relative;
     display: flex;
@@ -114,6 +113,7 @@ nav ul li a:hover {
         display: block;
     }
 }
+
 
 main {
     padding: 20px;
