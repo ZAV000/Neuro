@@ -40,6 +40,14 @@ header {
     padding: 10px 20px;
 }
 
+nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e046e0;
+}
+
  .menu-toggle {
         display: block;
     }
