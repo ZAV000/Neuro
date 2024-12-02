@@ -40,38 +40,50 @@ header {
     padding: 10px 20px;
 }
 
+/* Barra de navegación */
 nav {
     position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #e046e0;
+    padding: 10px 20px;
 }
 
- .menu-toggle {
-        display: block;
-    }
-
-    nav ul {
-        display: none;  
-        background-color: #e046e0;
-        position: absolute;
-        top: 60px; 
-        width: 100%;
-        text-align: left;
-        padding: 10px 20px;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
-
-    nav ul li {
-        display: block; 
-        margin: 10px 0;
-    }
-
-    nav ul.show {
-        display: block;
-    }
+/* Botón del menú hamburguesa */
+.menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    outline: none;
 }
+
+/* Menú oculto por defecto */
+nav ul {
+    display: none; /* Oculta el menú */
+    background-color: #e046e0;
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    text-align: left;
+    padding: 10px 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para los elementos del menú */
+nav ul li {
+    display: block; /* Cada enlace en línea */
+    margin: 10px 0;
+}
+
+/* Mostrar el menú cuando se active */
+nav ul.show {
+    display: block; /* Muestra el menú */
+}
+
 
 main {
     padding: 20px;
