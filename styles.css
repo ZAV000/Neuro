@@ -28,19 +28,6 @@ header p {
     font-size: 1rem;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-header {
-    background-color: #6d7efd;
-    color: white;
-    padding: 10px 20px;
-}
-
-/* Barra de navegación */
 nav {
     position: relative;
     display: flex;
@@ -76,13 +63,29 @@ nav ul {
 /* Estilo para los elementos del menú */
 nav ul li {
     display: block; /* Cada enlace en línea */
-    color: white;
-    text-decoration: none;
+}
+
+nav ul li a {
+    color: white; /* Color blanco para el texto */
+    text-decoration: none; /* Sin subrayado */
 }
 
 /* Mostrar el menú cuando se active */
 nav ul.show {
     display: block; /* Muestra el menú */
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #6d7efd;
+    color: white;
+    padding: 10px 20px;
 }
 
 
