@@ -76,7 +76,8 @@ nav ul {
 /* Estilo para los elementos del menú */
 nav ul li {
     display: block; /* Cada enlace en línea */
-    color: white
+    color: white;
+    text-decoration: none;
     margin: 10px 0;
 }
 
