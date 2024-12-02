@@ -40,66 +40,29 @@ header {
     padding: 10px 20px;
 }
 
-nav {
-    background-color: #0097b2;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
-}
+ .menu-toggle {
+        display: block;
+    }
 
-/* Botón del menú hamburguesa */
-.menu-toggle {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 30px;
-    cursor: pointer;
-    outline: none;
-    transition: transform 0.3s ease;
-}
+    nav ul {
+        display: none;  
+        background-color: #e046e0;
+        position: absolute;
+        top: 60px; 
+        width: 100%;
+        text-align: left;
+        padding: 10px 20px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
 
-.menu-toggle:active {
-    transform: scale(1.1);
-}
+    nav ul li {
+        display: block; 
+        margin: 10px 0;
+    }
 
-/* Ocultar el menú por defecto */
-.menu-items {
-    display: none;
-    list-style: none;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    right: 0;
-    background-color: #0097b2;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-}
-
-/* Mostrar el menú cuando está activo */
-.menu-items.show {
-    display: block;
-}
-
-.menu-items li {
-    margin: 10px 0;
-}
-
-.menu-items a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 10px;
-    display: block;
-    transition: background-color 0.3s ease;
-}
-
-.menu-items a:hover {
-    background-color: #333;
-    color: #0097b2
-    border-radius: 5px;
+    nav ul.show {
+        display: block;
+    }
 }
 
 main {
