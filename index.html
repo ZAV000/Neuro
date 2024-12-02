@@ -28,16 +28,12 @@
         </ul>
     </nav>
 
-    <script>
-       document.addEventListener('DOMContentLoaded', () => {
-  const toggleButton = document.getElementById('menu-toggle');
-  const menuItems = document.getElementById('menu-items');
-
-  toggleButton.addEventListener('click', () => {
-    menuItems.classList.toggle('show');
-  });
-});
-    </script>
+        <script>
+        function toggleMenu() {
+            const menu = document.getElementById("menu");
+            menu.classList.toggle("show");
+        }
+        </script>
 
     <header>
         <h1>Enfermedad de parkinson</h1>
