@@ -29,10 +29,18 @@
     </nav>
 
         <script>
-        function toggleMenu() {
-            const menu = document.getElementById("menu");
-            menu.classList.toggle("show");
-        }
+        // JavaScript para manejar el menú
+document.addEventListener('DOMContentLoaded', () => {
+  const toggleButton = document.getElementById('menu-toggle');
+  const menuItems = document.getElementById('menu-items');
+
+  // Añadir un evento de clic al botón del menú
+  toggleButton.addEventListener('click', () => {
+    // Alternar la visibilidad del menú
+    menuItems.classList.toggle('show');
+  });
+});
+
         </script>
 
     <header>
