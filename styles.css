@@ -41,79 +41,65 @@ header {
 }
 
 nav {
-    position: relative;
+    background-color: #333;
+    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #6b8cff;
+    color: white;
 }
 
+/* Botón del menú hamburguesa */
 .menu-toggle {
-    display: none;  
-    background-color: #6b8cff;
+    background: none;
     border: none;
     color: white;
     font-size: 30px;
-    padding: 10px;
     cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    outline: none;
+    transition: transform 0.3s ease;
 }
 
-.menu-toggle:hover {
-    background-color: #006fa6;
+.menu-toggle:active {
+    transform: scale(1.1);
 }
 
-nav ul {
+/* Ocultar el menú por defecto */
+.menu-items {
+    display: none;
     list-style: none;
-    padding: 0;
-    display: flex; 
-    margin: 0;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: #444;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
 }
 
-nav ul li {
-    margin: 0 15px; 
+/* Mostrar el menú cuando está activo */
+.menu-items.show {
+    display: block;
 }
 
-nav ul li a {
+.menu-items li {
+    margin: 10px 0;
+}
+
+.menu-items a {
     color: white;
     text-decoration: none;
     font-size: 18px;
-    padding: 10px 15px;
-    border-radius: 5px;
+    padding: 10px;
+    display: block;
     transition: background-color 0.3s ease;
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
+.menu-items a:hover {
+    background-color: #555;
+    border-radius: 5px;
 }
-
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-
-    nav ul {
-        display: none;  
-        background-color: #6b8cff;
-        position: absolute;
-        top: 60px; 
-        width: 100%;
-        text-align: left;
-        padding: 10px 20px;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
-
-    nav ul li {
-        display: block; 
-        margin: 10px 0;
-    }
-
-    nav ul.show {
-        display: block;
-    }
-}
-
 
 main {
     padding: 20px;
