@@ -46,12 +46,12 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #0097b2;
+    background-color: #6b8cff;
 }
 
 .menu-toggle {
     display: none;  
-    background-color: #0097b2;
+    background-color: #6b8cff;
     border: none;
     color: white;
     font-size: 30px;
@@ -96,7 +96,7 @@ nav ul li a:hover {
 
     nav ul {
         display: none;  
-        background-color: #0097b2;
+        background-color: #6b8cff;
         position: absolute;
         top: 60px; 
         width: 100%;
@@ -175,7 +175,7 @@ img {
 
 figcaption {
     font-size: 0.9rem;
-    color: #0097b2;
+    color: #006fa6;
     margin-top: 10px;
 }
 
