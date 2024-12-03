@@ -169,7 +169,7 @@ footer p {
 }
 
 .image-container img {
-    max-width: 200px;
+    max-width: 300px;
     border-radius: 5px;
     cursor: pointer;
     transition: transform 0.2s;
