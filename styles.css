@@ -169,14 +169,14 @@ footer p {
 }
 
 .image-container img {
-    max-width: 150px;
+    max-width: 200px;
     border-radius: 5px;
     cursor: pointer;
     transition: transform 0.2s;
 }
 
 .image-container img:hover {
-    transform: scale(1.1);
+    transform: scale(1.3);
 }
 
 .modal {
