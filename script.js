@@ -53,3 +53,4 @@ const observer = new IntersectionObserver(
 document.querySelectorAll(".animate-on-scroll").forEach((element) => {
   observer.observe(element);
 });
+

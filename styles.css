@@ -8,17 +8,21 @@ body {
   }
   
   h1, h2, h3 {
+    margin: 20px;
+    padding: 10px;
     font-family: 'Georgia', serif;
     color: #2c3e50;
   }
   
   p {
+    margin: 20px;
+    padding: 10px;
     line-height: 1.6;
   }
   
   /* Encabezado */
   header {
-    background-color: #34495e;
+    background-color: #769fc8;
     color: white;
     padding: 20px;
     text-align: center;
@@ -185,42 +189,112 @@ nav {
   }
   
   /* Sección de preguntas frecuentes */
-  .faq-section {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  /* Contenedor de la sección FAQ */
+.faq {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f7f9fc;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+.faq h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #34495e;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #1abc9c;
+  padding-bottom: 10px;
+}
+
+.quotes {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f7f9fc;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+.quotes p {
+  text-align: center;
+  margin: 20px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.quotes h2 {
+  text-align: left;
+  font-size: 2rem;
+  color: #34495e;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #1abc9c;
+  padding-bottom: 10px;
+}
+
+/* Estilo general para cada pregunta */
+details {
+  margin-bottom: 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: white;
+  padding: 10px 15px;
+  transition: box-shadow 0.3s;
+}
+
+details[open] {
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+summary {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #34495e;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+summary::marker {
+  color: #1abc9c;
+  font-size: 1.5rem;
+}
+
+details p {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+/* Efecto hover en la pregunta */
+details:hover {
+  border-color: #1abc9c;
+}
+
+/* Estilo responsivo para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .faq {
+    padding: 15px;
   }
-  
-  .faq-section h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 1.8rem;
+
+  details {
+    padding: 10px;
   }
-  
-  .faq-question {
-    cursor: pointer;
-    padding: 10px 0;
-    border-bottom: 1px solid #ddd;
-    font-weight: bold;
-    color: #2c3e50;
+
+  summary {
+    font-size: 1.1rem;
   }
-  
-  .faq-answer {
-    display: none;
-    padding: 10px 0;
-    color: #555;
+
+  details p {
+    font-size: 0.95rem;
   }
-  
-  .faq-question:hover {
-    color: #1abc9c;
-  }
-  
-  .faq-question.active + .faq-answer {
-    display: block;
-  }
+}
   
   /* Animaciones */
   .fade-in {
