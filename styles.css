@@ -61,6 +61,8 @@ nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
+    justify-content: space-around; /* Espacia los elementos de manera equidistante */
+    align-items: center;
     display: flex; /* Alinea los elementos del menú horizontalmente */
     justify-content: center; /* Centra el contenido */
     gap: 20px; /* Espaciado entre los enlaces */
