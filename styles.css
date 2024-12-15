@@ -46,7 +46,7 @@ body {
     text-align: center;
   }
 
-  /* Navegación fija */
+/* Navegación fija */
 nav {
   position: fixed;
   top: 0;
@@ -120,59 +120,36 @@ nav ul li ul li a:hover {
   border-radius: 5px;
 }
 
-/* Botón de menú hamburguesa */
-.hamburger {
-  display: none;
-  font-size: 30px;
-  color: white;
-  cursor: pointer;
-  padding: 10px;
-  background-color: transparent;
-  border: none;
-}
-
 /* Diseño responsive */
 @media (max-width: 768px) {
   nav ul {
-      flex-direction: column;
-      justify-content: flex-start;
+      flex-direction: column; /* Cambia a disposición vertical */
+      justify-content: flex-start; /* Alinea elementos al inicio */
       align-items: flex-start;
-      background-color: #34495e;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      width: 100%;
-      height: auto;
-      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-      display: none; /* Oculto inicialmente */
-  }
-
-  nav ul.show {
-      display: flex; /* Mostrar menú al hacer clic */
+      background-color: #34495e; /* Mantén el color de fondo */
+      position: relative; /* Coloca el menú dentro del flujo */
+      padding: 0;
+      gap: 0;
   }
 
   nav ul li {
-      width: 100%;
+      width: 100%; /* Asegura que los elementos ocupen todo el ancho */
       text-align: left;
-  }
-
-  nav ul li ul {
-      position: static; /* Submenús se muestran dentro del flujo */
-      width: 100%;
   }
 
   nav ul li a {
       padding: 15px;
       display: block;
+      width: 100%; /* Asegura que el enlace ocupe el ancho completo */
+  }
+
+  nav ul li ul {
+      position: static; /* Permite que los submenús se acomoden en el flujo */
+      padding-left: 15px; /* Agrega un poco de indentación para submenús */
+  }
+
+  nav ul li ul li {
       width: 100%;
-  }
-
-  nav ul li.show-submenu ul {
-      display: block; /* Mostrar submenú cuando se hace clic */
-  }
-
-  .hamburger {
-      display: block;
   }
 }
 

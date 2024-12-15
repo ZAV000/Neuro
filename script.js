@@ -37,39 +37,4 @@ showSlide(currentSlide);
     }
   };
 
-// Seleccionar elementos
-const hamburger = document.querySelector(".hamburger");
-const menu = document.querySelector("nav ul");
-const menuItems = document.querySelectorAll("nav ul li");
-
-// Alternar visibilidad del menú principal
-hamburger.addEventListener("click", () => {
-    menu.classList.toggle("show");
-});
-
-// Mostrar y ocultar submenús
-menuItems.forEach((item) => {
-    const submenu = item.querySelector("ul");
-
-    if (submenu) {
-        item.addEventListener("click", (e) => {
-            e.stopPropagation();
-
-            // Ocultar otros submenús
-            menuItems.forEach((i) => {
-                if (i !== item) i.classList.remove("show-submenu");
-            });
-
-            // Alternar submenú actual
-            item.classList.toggle("show-submenu");
-        });
-    }
-});
-
-// Cerrar el menú al hacer clic en un enlace
-menu.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-        menu.classList.remove("show");
-    });
-});
 
