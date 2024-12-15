@@ -46,69 +46,73 @@ body {
     text-align: center;
   }
 
-  nav {
-    position: fixed; /* Fija el navegador en la parte superior */
-    top: 0; /* Asegura que esté en la parte superior de la ventana */
-    left: 0;
-    width: 100%; /* Ocupa todo el ancho de la página */
-    background-color: #34495e; /* Color de fondo para que destaque */
-    z-index: 1000; /* Asegura que esté por encima de otros elementos */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera para resaltar */
-    padding: 10px 0; /* Espaciado interno */
+  /* Navegación fija */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #34495e;
+  z-index: 1000;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
 }
 
+/* Menú principal */
 nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    justify-content: space-around; /* Espacia los elementos de manera equidistante */
-    align-items: center;
-    display: flex; /* Alinea los elementos del menú horizontalmente */
-    justify-content: center; /* Centra el contenido */
-    gap: 20px; /* Espaciado entre los enlaces */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
 }
 
+/* Elementos del menú */
 nav ul li {
-    position: relative; /* Necesario para submenús */
+  position: relative;
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 1em;
-    padding: 10px 15px;
-    transition: background-color 0.3s ease; /* Efecto suave al pasar el mouse */
+  text-decoration: none;
+  color: white;
+  font-size: 1em;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease;
 }
 
 nav ul li a:hover {
-    background-color: #2c3e50; /* Color al pasar el mouse */
-    border-radius: 5px; /* Bordes redondeados */
+  background-color: #2c3e50;
+  border-radius: 5px;
 }
 
 /* Submenús */
 nav ul li ul {
-    display: none; /* Oculta los submenús por defecto */
-    position: absolute; /* Coloca el submenú debajo del enlace principal */
-    top: 100%;
-    left: 0;
-    background-color: #2c3e50;
-    list-style: none;
-    padding: 10px 0;
-    border-radius: 5px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para el submenú */
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #2c3e50;
+  list-style: none;
+  padding: 10px 0;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  min-width: 200px;
+  z-index: 1000;
 }
 
 nav ul li ul li {
-    text-align: left;
+  text-align: left;
 }
 
 nav ul li ul li a {
-    padding: 10px 15px;
-    display: block;
+  padding: 10px 15px;
+  display: block;
 }
 
 nav ul li:hover ul {
-    display: block; /* Muestra el submenú al pasar el mouse */
+  display: block;
 }
 
 nav ul li ul li a:hover {
@@ -116,6 +120,7 @@ nav ul li ul li a:hover {
   border-radius: 5px;
 }
 
+/* Botón de menú hamburguesa */
 .hamburger {
   display: none;
   font-size: 30px;
@@ -126,40 +131,51 @@ nav ul li ul li a:hover {
   border: none;
 }
 
-/* Mostrar icono de hamburguesa en pantallas pequeñas */
+/* Diseño responsive */
 @media (max-width: 768px) {
   nav ul {
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    background-color: #34495e;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    height: auto;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      background-color: #34495e;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      height: auto;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+      display: none; /* Oculto inicialmente */
   }
 
-  nav ul.hide {
-    display: none; /* Ocultar el menú cuando esté cerrado */
+  nav ul.show {
+      display: flex; /* Mostrar menú al hacer clic */
   }
 
   nav ul li {
-    width: 100%;
-    text-align: left;
+      width: 100%;
+      text-align: left;
+  }
+
+  nav ul li ul {
+      position: static; /* Submenús se muestran dentro del flujo */
+      width: 100%;
   }
 
   nav ul li a {
-    padding: 15px;
-    display: block;
-    width: 100%;
+      padding: 15px;
+      display: block;
+      width: 100%;
+  }
+
+  nav ul li.show-submenu ul {
+      display: block; /* Mostrar submenú cuando se hace clic */
   }
 
   .hamburger {
-    display: block;
+      display: block;
   }
 }
+
 
   .quotes {
     margin: 20px auto;
