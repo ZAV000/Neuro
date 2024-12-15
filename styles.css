@@ -5,6 +5,7 @@ body {
     padding: 0;
     background-color: #f8f9fa;
     color: #333;
+    margin-top: 38px
   }
   
   h1, h2, h3 {
@@ -32,71 +33,77 @@ body {
     margin: 0;
     font-size: 2.5rem;
   }
-  
-  /* Menú de navegación */
-nav {
-    background-color: #34495e;
-    padding: 15px;
-    font-family: Arial, sans-serif;
-  }
-  
-  nav ul {
+
+  nav {
+    position: fixed; /* Fija el navegador en la parte superior */
+    top: 0; /* Asegura que esté en la parte superior de la ventana */
+    left: 0;
+    width: 100%; /* Ocupa todo el ancho de la página */
+    background-color: #34495e; /* Color de fondo para que destaque */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera para resaltar */
+    padding: 10px 0; /* Espaciado interno */
+}
+
+nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
-  nav ul li {
-    position: relative;
-    margin: 0 20px;
-  }
-  
-  nav ul li a {
-    color: white;
+    display: flex; /* Alinea los elementos del menú horizontalmente */
+    justify-content: center; /* Centra el contenido */
+    gap: 20px; /* Espaciado entre los enlaces */
+}
+
+nav ul li {
+    position: relative; /* Necesario para submenús */
+}
+
+nav ul li a {
     text-decoration: none;
+    color: white;
+    font-size: 1em;
     padding: 10px 15px;
-    display: block;
-    font-size: 1.2rem;
-    transition: background-color 0.3s;
-  }
-  
-  nav ul li a:hover {
-    background-color: #1abc9c;
-    border-radius: 5px;
-  }
-  
-  /* Estilos para los submenús */
-  nav ul li ul {
-    display: none;
-    position: absolute;
+    transition: background-color 0.3s ease; /* Efecto suave al pasar el mouse */
+}
+
+nav ul li a:hover {
+    background-color: #2c3e50; /* Color al pasar el mouse */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Submenús */
+nav ul li ul {
+    display: none; /* Oculta los submenús por defecto */
+    position: absolute; /* Coloca el submenú debajo del enlace principal */
     top: 100%;
     left: 0;
     background-color: #2c3e50;
-    border-radius: 5px;
-    min-width: 180px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    list-style: none;
     padding: 10px 0;
-  }
-  
-  nav ul li:hover > ul {
-    display: block;
-  }
-  
-  nav ul li ul li a {
-    padding: 8px 15px;
-    font-size: 1rem;
-    color: white;
-    text-decoration: none;
-  }
-  
-  nav ul li ul li a:hover {
-    background-color: #1abc9c;
     border-radius: 5px;
-  }
-  
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para el submenú */
+}
+
+nav ul li ul li {
+    text-align: left;
+}
+
+nav ul li ul li a {
+    padding: 10px 15px;
+    display: block;
+}
+
+nav ul li:hover ul {
+    display: block; /* Muestra el submenú al pasar el mouse */
+}
+
+nav ul li ul li a:hover {
+  background-color: #1abc9c;
+  border-radius: 5px;
+}
+
+
+
   /* Estilo responsivo para pantallas pequeñas */
   @media (max-width: 768px) {
     nav ul {
