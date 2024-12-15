@@ -126,38 +126,36 @@ nav ul li ul li a:hover {
   border: none;
 }
 
-/* Mostrar el icono de hamburguesa en pantallas pequeñas */
+/* Mostrar icono de hamburguesa en pantallas pequeñas */
 @media (max-width: 768px) {
-  /* Menú horizontal a vertical */
   nav ul {
-    display: none; /* Ocultamos el menú en móviles */
     flex-direction: column;
+    justify-content: flex-start;
     align-items: flex-start;
-    width: 100%;
-    position: absolute;
-    top: 100%;
-    left: 0;
     background-color: #34495e;
-    padding: 10px 0;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: auto;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  }
+
+  nav ul.hide {
+    display: none; /* Ocultar el menú cuando esté cerrado */
   }
 
   nav ul li {
     width: 100%;
-    margin: 10px 0;
+    text-align: left;
   }
 
   nav ul li a {
-    text-align: left;
-    padding: 12px 20px;
+    padding: 15px;
+    display: block;
     width: 100%;
   }
 
-  /* Mostrar el menú cuando el botón de hamburguesa es clickeado */
-  nav ul.show {
-    display: block;
-  }
-
-  /* Mostrar el icono de hamburguesa */
   .hamburger {
     display: block;
   }

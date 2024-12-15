@@ -37,19 +37,15 @@ showSlide(currentSlide);
     }
   };
 
-  // Función para alternar el menú
+// Seleccionar elementos
+const hamburger = document.getElementById('hamburger');
+const menu = document.getElementById('menu');
+
+// Función para mostrar/ocultar menú
 function toggleMenu() {
-    const menu = document.getElementById('menu');
-    menu.classList.toggle('show');
-  }
-  
-  // Evento de clic en el botón de hamburguesa  
-  document.getElementById('hamburger').addEventListener('click', toggleMenu);
-  
-  // Evento de clic fuera del menú para cerrarlo
-  document.addEventListener('click', function(event) {
-    const menu = document.getElementById('menu');
-    if (!menu.contains(event.target)) {
-      menu.classList.remove('show');
-    }
-  })  
+  menu.classList.toggle('hide');
+}
+
+// Evento para el botón de hamburguesa
+hamburger.addEventListener('click', toggleMenu);
+
