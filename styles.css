@@ -6,6 +6,7 @@ body {
     background-color: #f8f9fa;
     color: #333;
     margin-top: 38px;
+    text-align: justify;
   }
   
   h1, h2, h3 {
@@ -19,7 +20,12 @@ body {
     margin: 20px;
     padding: 10px;
     line-height: 1.6;
-    text-align: justify;
+  }
+
+  ul  {
+    margin: 20px;
+    padding: 10px;
+    line-height: 1.6;
   }
   
   /* Encabezado */
