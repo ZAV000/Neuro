@@ -120,37 +120,92 @@ nav ul li ul li a:hover {
   border-radius: 5px;
 }
 
-/* Diseño responsive */
-@media (max-width: 768px) {
-  nav ul {
-      flex-direction: column; /* Cambia a disposición vertical */
-      justify-content: flex-start; /* Alinea elementos al inicio */
-      align-items: flex-start;
-      background-color: #34495e; /* Mantén el color de fondo */
-      position: relative; /* Coloca el menú dentro del flujo */
-      padding: 0;
-      gap: 0;
+@media (max-width: 600px) {
+
+  body {
+
+    font-size: 16px; /* Tamaño de fuente adecuado para pantallas pequeñas */
+
   }
 
-  nav ul li {
-      width: 100%; /* Asegura que los elementos ocupen todo el ancho */
-      text-align: left;
+  .navbar {
+
+    flex-direction: column; /* Organiza la navegación verticalmente */
+
+    align-items: center;
+
   }
 
-  nav ul li a {
-      padding: 15px;
-      display: block;
-      width: 100%; /* Asegura que el enlace ocupe el ancho completo */
+  .sidebar {
+
+    display: none; /* Oculta la barra lateral en móviles para evitar el desorden */
+
   }
 
-  nav ul li ul {
-      position: static; /* Permite que los submenús se acomoden en el flujo */
-      padding-left: 15px; /* Agrega un poco de indentación para submenús */
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+
+  body {
+
+    font-size: 18px; /* Tamaño de fuente un poco mayor, adaptado a pantallas medianas */
+
   }
 
-  nav ul li ul li {
-      width: 100%;
+  .navbar {
+
+    flex-direction: row; /* Volvemos la navegación a horizontal */
+
+    justify-content: space-around;
+
   }
+
+  .sidebar {
+
+    display: block; /* Mostramos la barra lateral, pero la mantenemos accesoria */
+
+    width: 30%;
+
+  }
+
+  .main-content {
+
+    width: 70%; /* Ajustamos el ancho del contenido principal */
+
+  }
+
+}
+
+@media (min-width: 1024px) {
+
+  body {
+
+    font-size: 20px; /* Fuente más grande para legibilidad en pantallas grandes */
+
+  }
+
+  .container {
+
+    display: flex;
+
+    flex-direction: row; /* Mantenemos un layout amplio y cómodo */
+
+    flex-wrap: nowrap; /* Evitamos que los elementos se envuelvan */
+
+  }
+
+  .sidebar {
+
+    width: 25%; /* Ajustamos la barra lateral para ocupar un espacio menor */
+
+  }
+
+  .main-content {
+
+    width: 75%; /* El contenido principal tiene la mayor prioridad */
+
+  }
+
 }
 
 
