@@ -23,17 +23,19 @@ document.querySelector(".next").addEventListener("click", () => {
 // Mostrar la primera diapositiva al cargar la página
 showSlide(currentSlide);
 
-// Obtén el ícono y el header
-  const floatingIcon = document.getElementById("floatingIcon");
-  const header = document.querySelector("header"); // Ajusta si el selector de header cambia
+// Seleccionar el ícono flotante
+const floatingIcon = document.getElementById("floatingIcon");
 
-// Cuando se haga scroll en la página
-  window.onscroll = function() {
-    // Si el desplazamiento es mayor que la altura del header, mostrar el ícono
-    if (window.pageYOffset > header.offsetHeight) {
+// Validar si el ícono flotante existe
+if (floatingIcon) {
+  // Mostrar el ícono cuando el usuario haga scroll
+  window.onscroll = function () {
+    if (window.pageYOffset > 100) {
       floatingIcon.style.display = "flex"; // Mostrar el ícono
     } else {
       floatingIcon.style.display = "none"; // Ocultar el ícono
     }
   };
+}
+
 

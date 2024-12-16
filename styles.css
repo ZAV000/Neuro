@@ -465,7 +465,7 @@ details:hover {
 .card h3 {
   margin: 10px 0;
   font-size: 1.5rem;
-  color: #0056b3;
+  color: #34495e;
 }
 
 /* Efectos al pasar el ratón por la tarjeta */
@@ -476,7 +476,7 @@ details:hover {
 
 /* Efecto de cambio de color en los enlaces al pasar el ratón */
 .card a:hover h3 {
-  color: #007bff;
+  color: #1abc9c;
 }
 
 /* Sección del formulario */
