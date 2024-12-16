@@ -37,4 +37,3 @@ showSlide(currentSlide);
     }
   };
 
-

@@ -424,3 +424,150 @@ details:hover {
     }
   }
   
+/* Archivo: styles.css */
+
+/* Contenedor de todas las tarjetas */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f4f4f9;
+}
+
+/* Estilo para cada tarjeta */
+.card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden; /* Asegura que nada sobresalga */
+}
+
+/* Imágenes dentro de las tarjetas */
+.card img {
+  width: 100%; /* La imagen ocupará todo el ancho disponible */
+  height: auto; /* Mantendrá la proporción original */
+  border-radius: 10px 10px 0 0; /* Esquinas redondeadas para las imágenes */
+}
+
+/* Estilo del enlace dentro de las tarjetas */
+.card a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+}
+
+/* Títulos */
+.card h3 {
+  margin: 10px 0;
+  font-size: 1.5rem;
+  color: #0056b3;
+}
+
+/* Efectos al pasar el ratón por la tarjeta */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Efecto de cambio de color en los enlaces al pasar el ratón */
+.card a:hover h3 {
+  color: #007bff;
+}
+
+/* Sección del formulario */
+#tuopinion {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+#tuopinion h2 {
+  text-align: center;
+  color: #333;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+/* Formulario */
+.styled-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Grupos del formulario */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+label {
+  font-weight: bold;
+  color: #555;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #fefefe;
+  transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+/* Fieldset */
+fieldset {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  background-color: #fefefe;
+}
+
+legend {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Estilo para los radio buttons */
+input[type="radio"] {
+  margin-right: 5px;
+}
+
+/* Botón */
+input[type="submit"] {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Espaciado entre etiquetas y campos */
+.form-group label {
+  margin-bottom: 5px;
+}
