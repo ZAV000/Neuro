@@ -5,7 +5,7 @@ body {
     padding: 0;
     background-color: #f8f9fa;
     color: #333;
-    margin-top: 38px
+    margin-top: 38px;
   }
   
   h1, h2, h3 {
@@ -19,6 +19,7 @@ body {
     margin: 20px;
     padding: 10px;
     line-height: 1.6;
+    text-align: justify;
   }
   
   /* Encabezado */
@@ -569,3 +570,88 @@ input[type="submit"]:hover {
 .form-group label {
   margin-bottom: 5px;
 }
+
+/* Estilo general para la imagen */
+.clickable-image {
+  text-align: center;
+  max-width: 300px;
+  margin: 20px auto;
+}
+
+.clickable-image img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.clickable-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.clickable-image figcaption {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
+  font-style: italic;
+}
+
+/* Estilo para el modal */
+.modal {
+  display: none; /* Oculto por defecto */
+  position: fixed;
+  z-index: 1000;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro semi-transparente */
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 80%; /* Ancho máximo */
+  max-height: 80%; /* Altura máxima */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  animation: zoomIn 0.3s ease; /* Efecto de ampliación */
+}
+
+@keyframes zoomIn {
+  from {
+      transform: scale(0.8);
+      opacity: 0;
+  }
+  to {
+      transform: scale(1);
+      opacity: 1;
+  }
+}
+
+#caption {
+  text-align: center;
+  color: #fff;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close:hover {
+  color: #ccc;
+}
+
