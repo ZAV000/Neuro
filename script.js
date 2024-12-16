@@ -23,11 +23,11 @@ document.querySelector(".next").addEventListener("click", () => {
 // Mostrar la primera diapositiva al cargar la página
 showSlide(currentSlide);
 
-  // Obtén el ícono y el header
+// Obtén el ícono y el header
   const floatingIcon = document.getElementById("floatingIcon");
   const header = document.querySelector("header"); // Ajusta si el selector de header cambia
 
-  // Cuando se haga scroll en la página
+// Cuando se haga scroll en la página
   window.onscroll = function() {
     // Si el desplazamiento es mayor que la altura del header, mostrar el ícono
     if (window.pageYOffset > header.offsetHeight) {
