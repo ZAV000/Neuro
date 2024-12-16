@@ -491,7 +491,7 @@ details:hover {
 
 #tuopinion h2 {
   text-align: center;
-  color: #333;
+  color: #34495e;
   font-size: 1.8rem;
   margin-bottom: 20px;
 }
@@ -526,7 +526,7 @@ input, textarea, select {
 }
 
 input:focus, textarea:focus, select:focus {
-  border-color: #007bff;
+  border-color: #1abc9c;
   outline: none;
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
 }
@@ -541,7 +541,7 @@ fieldset {
 
 legend {
   font-weight: bold;
-  color: #333;
+  color: #34495e;
 }
 
 /* Estilo para los radio buttons */
@@ -551,7 +551,7 @@ input[type="radio"] {
 
 /* Botón */
 input[type="submit"] {
-  background-color: #007bff;
+  background-color: #34495e;
   color: #ffffff;
   border: none;
   border-radius: 5px;
@@ -562,7 +562,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background-color: #0056b3;
+  background-color: #1abc9c;
 }
 
 /* Espaciado entre etiquetas y campos */
